@@ -1,0 +1,402 @@
+.hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow-x: hidden;
+    background-color: #00255C;
+    // height: 100vh;
+    box-sizing: content-box;
+    @include tablets {
+        background-position: left;
+    }
+}
+
+.hero__all-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.hero__wrap {
+    position: relative;
+    background-color: #00255c;
+}
+
+.swiper-container--hero .hero {
+    padding-bottom: 200px;
+    @include laptop {
+        padding-bottom: 320px;
+    }
+}
+
+.swiper-container--hero .swiper-button-prev,
+.swiper-container--hero .swiper-button-next {
+    display: none !important;
+    @include laptop {
+        display: flex !important;
+    }
+}
+
+.swiper-container--hero .swiper-button-prev {
+    padding: 20px 20px 20px 0px;
+}
+
+.swiper-container--hero .swiper-button-next {
+    padding: 20px 0px 20px 20px;
+}
+
+.swiper-container--hero.load .swiper-slide-active {
+    transition: all 6s ease !important;
+}
+
+.hero__title {
+    padding-top: 110px;
+    width: 90%;
+    @include tablets {
+        width: 70%;
+        padding-top: 140px;
+    }
+    @include laptop {
+        width: 60%;
+        padding-top: 180px;
+    }
+    @include laptop {
+        width: 70%;
+        padding-top: 250px;
+    }
+}
+
+.hero-inner .hero__title {
+    @include laptop {
+        width: 70%;
+        padding-top: 210px;
+    }
+}
+
+.hero__title span {
+    font-family: $font-text;
+    font-weight: normal;
+    text-transform: lowercase;
+}
+
+.hero__link-wrap {
+    position: relative;
+    padding-top: 20px;
+    color: #00FFF0;
+    transition: all 0.5s ease-in-out;
+    @include tablets {
+        padding-top: 40px;
+    }
+    @include laptop {
+        padding-top: 70px;
+    }
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+.hero__link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+.hero__subtitle {
+    font-family: $font-title;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    position: relative;
+    display: inline-block;
+    padding-right: 50px;
+    width: 95%;
+    box-sizing: border-box;
+    @include tablets {
+        font-size: 26px;
+        line-height: 31px;
+        padding-right: 70px;
+        width: 50%;
+    }
+    @include laptop {
+        font-size: 30px;
+        line-height: 36px;
+        padding-right: 80px;
+        width: 40%;
+    }
+}
+
+.hero__subtitle .animated {
+    transition: all 0.5s ease;
+    display: inline-block;
+}
+
+.hero__subtitle .show {
+    transform: translateX(0%);
+}
+
+.hero__subtitle .hide {
+    transform: translateX(-200%);
+}
+
+.hero__subtitle::before {
+    content: "";
+    position: absolute;
+    right: 25px;
+    height: 100%;
+    width: 4px;
+    background: #2AC7BE;
+    transition: all 0.5s ease-in-out;
+    @include laptop {
+        top: -10%;
+        height: 120%;
+        right: 30px;
+    }
+}
+
+.hero__subtitle::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 13px;
+    background-image: url(../img/arrow.svg);
+    transition: all 0.5s ease-in-out;
+    @include laptop {
+        height: 33px;
+        width: 16px;
+        background-size: 16px 33px;
+        background-repeat: no-repeat;
+    }
+}
+
+.hero__link-wrap:hover .hero__subtitle::before {
+    transform: translateX(-5px);
+}
+
+.hero__link-wrap:hover .hero__subtitle::after {
+    transform: translate( 5px, -50%);
+}
+
+.hero__link-desc {
+    font-family: $font-title;
+    padding-top: 10px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #00FFF0;
+    @include tablets {
+        font-size: 14px;
+        line-height: 17px;
+        padding-top: 15px;
+    }
+    @include laptop {
+        padding-top: 25px;
+    }
+}
+
+// Список ссылок
+.hero__links {
+    margin-top: 22px;
+    position: relative;
+    background: rgba(196, 196, 196, 0.2);
+    background-blend-mode: screen;
+    backdrop-filter: blur(25px);
+    width: 100%;
+    @include laptop {
+        margin-top: 40px
+    }
+    @include desktop {
+        margin-top: 75px;
+        box-sizing: border-box
+    }
+}
+
+.hero__wrap .hero__links {
+    bottom: 0;
+    z-index: 10000;
+    position: absolute;
+}
+
+.hero__links-list {
+    @include list-destroy;
+    margin: 0;
+    display: flex;
+    // overflow-x: scroll;
+    justify-content: space-between;
+    position: relative;
+    cursor: pointer;
+    z-index: 10000;
+    @include laptop {
+        overflow-x: hidden;
+    }
+    @include desktop {
+        max-width: 1420px;
+        margin: 0 auto;
+    }
+}
+
+.hero__links-list::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: rgba(255, 255, 255, 0.0);
+}
+
+.hero__links-item {
+    flex-shrink: 0;
+    width: 20%;
+    position: relative;
+    width: 200px;
+    height: 100%;
+    min-height: 100%;
+    padding: 25px 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: all 0.5s ease-in-out;
+    &:hover {
+        background: #06645F;
+    }
+    @include tablets {
+        width: 20%;
+        padding: 35px 15px 35px 10px;
+        &:hover {
+            background: transparent;
+        }
+    }
+    @include laptop {
+        padding: 35px;
+        &:not(:last-child) {
+            border-right: 1px solid rgba(255, 255, 255, 0.4);
+        }
+    }
+}
+
+.hero__links-permalink {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.hero__links-icon {
+    display: flex;
+    height: 40px;
+    align-items: flex-end;
+    margin-bottom: 25px;
+    @include laptop {
+        height: 65px;
+        margin-bottom: 35px;
+    }
+}
+
+.hero__links-icon>img {
+    height: 100%;
+}
+
+.hero__links-desc {
+    font-family: $font-title;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    @include laptop {
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.target {
+    width: 0px;
+    height: 100%;
+    background: #10788C;
+    background-blend-mode: screen;
+    backdrop-filter: blur(30px);
+    bottom: 0;
+    // background-blend-mode: screen;
+    // backdrop-filter: blur(30px);
+    position: absolute;
+    transform: translateX(-100%);
+    display: none;
+    transition: all 0.5s ease-in-out;
+    @include tablets {
+        display: block
+    }
+}
+
+.hero__desc {
+    // margin-top: 10px;
+    padding-bottom: 40px;
+    @include tablets {
+        padding-bottom: 35px;
+    }
+    @include laptop {
+        padding-bottom: 25px;
+    }
+    @include desktop {
+        padding-bottom: 80px;
+    }
+}
+
+.hero-inner .hero__desc {
+    padding-bottom: 190px;
+    @include tablets {
+        padding-bottom: 225px;
+    }
+    @include laptop {
+        padding-bottom: 225px;
+    }
+    @include desktop {
+        padding-bottom: 160px;
+    }
+}
+
+.hero__desc p {
+    color: #DBE3EB;
+    margin-top: 10px;
+    @include tablets {
+        margin-top: 15px;
+    }
+    @include laptop {
+        margin-top: 25px;
+    }
+    @include desktop {
+        margin-top: 35px;
+    }
+}
+
+.hero__desc-wrap {
+    max-height: 200px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+    @include tablets {
+        width: 80%;
+    }
+    @include laptop {
+        max-height: none;
+        width: 60%;
+    }
+    @include desktop {
+        width: 55%;
+    }
+}
+
+.hero__desc-wrap.active {
+    max-height: 100vh;
+}
+
+.link-detail {
+    @include laptop {
+        display: none;
+    }
+}

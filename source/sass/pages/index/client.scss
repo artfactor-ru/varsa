@@ -1,0 +1,35 @@
+.client {
+    @include block-style;
+    background: #F8F8F8;
+}
+
+.client__list {
+    @include list-destroy;
+    // height: 108px;
+    // justify-content: space-between;
+}
+
+.client__item {
+    width: auto;
+    width: 100px;
+    // flex-shrink: 0;
+    // margin-left: 40px;
+    @include tablets {
+        width: 100px;
+    }
+    @include laptop {
+        width: 120px;
+    }
+    @include desktop {
+        // max-width: 12%;
+        width: 120px;
+    }
+}
+
+.client .swiper-wrapper {
+    transition: all 1s ease !important;
+}
+
+.client .swiper-wrapper.transitionOff {
+    transition: all 0s ease !important;
+}

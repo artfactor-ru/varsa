@@ -1,0 +1,124 @@
+.partners {
+    background: #DBE3EB;
+    @include block-style;
+    color: #153d5c;
+}
+
+.partners__list {
+    @include list-destroy;
+}
+
+.partners__img--video {
+    position: relative;
+}
+
+.partners__img--video::before {
+    position: absolute;
+    content: "";
+    width: 100px;
+    background-size: 100px 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(../img/icon-play.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.partners__item {
+    background: #fff;
+    display: flex;
+    position: relative;
+}
+
+.partners__item:not(:last-child) {
+    margin-bottom: 40px;
+    @include tablets {
+        margin-bottom: 45px;
+    }
+    @include laptop {
+        margin-bottom: 60px;
+    }
+}
+
+.partners__wrap {
+    padding: 70px 30px;
+    @include tablets {
+        padding: 25px 30px 55px;
+    }
+    @include laptop {
+        padding: 25px 30px 35px;
+    }
+    @include desktop {
+        padding: 25px 50px 35px 70px;
+    }
+}
+
+.partners__img {
+    display: none;
+    flex-shrink: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    object-fit: cover;
+    @include tablets {
+        display: flex;
+        width: 305px;
+    }
+    @include laptop {
+        width: 505px;
+    }
+    @include desktop {
+        width: 570px;
+    }
+}
+
+.partners__item--project {
+    display: flex;
+    flex-direction: column;
+    @include tablets {
+        flex-direction: row;
+    }
+}
+
+.partners__item--project .partners__img {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    @include tablets {
+        display: flex;
+        width: 305px;
+        height: 250px;
+    }
+    @include laptop {
+        width: 505px;
+        height: 305px;
+    }
+    @include desktop {
+        width: 570px;
+        height: 370px;
+    }
+}
+
+.partners__img img {
+    object-fit: cover;
+}
+
+.partners__logo {
+    margin-bottom: 30px;
+    max-width: 150px;
+    @include laptop {
+        max-width: 250px;
+    }
+    @include desktop {
+        max-width: 300px;
+    }
+}
+
+.partners__title {
+    margin-bottom: 30px;
+    @include laptop {
+        max-width: 90%;
+    }
+}

@@ -1,0 +1,68 @@
+.team {
+    @include block-style;
+    background-image: url(../img/team-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    overflow: hidden;
+    @include tablets {
+        text-align: center;
+    }
+}
+
+.team__list {
+    @include list-destroy;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team__item {
+    width: 65%;
+    text-align: left;
+    margin-top: 30px;
+    @include tablets {
+        width: 50%;
+        box-sizing: border-box;
+        padding-right: 10%;
+        margin-top: 50px;
+    }
+    @include laptop {
+        margin-top: 75px;
+        width: 25%;
+        padding-right: 1%;
+    }
+    @include desktop {
+        margin-top: 85px;
+        padding-right: 5%;
+    }
+}
+
+.team__number {
+    font-family: $font-title-bold;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 10px;
+    display: inline-block;
+    @include tablets {
+        margin-bottom: 10px;
+        font-size: 70px;
+        line-height: 70px;
+    }
+    @include desktop {
+        font-size: 96px;
+        line-height: 96px;
+    }
+}
+
+.team__desc {
+    font-family: $font-title;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 26px;
+    /* or 144% */
+    text-transform: uppercase;
+    color: #FFFFFF;
+}

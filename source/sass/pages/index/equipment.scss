@@ -1,0 +1,102 @@
+.equipment {
+    @include block-style;
+    text-align: center;
+    color: #060606;
+}
+
+.swiper-container--equipment {
+    margin-top: 30px;
+    // width: 100%;
+    box-sizing: border-box;
+    padding-bottom: 5px;
+}
+
+.equipment__list {
+    @include list-destroy;
+    // overflow: hidden;
+}
+
+.equipment__item {
+    margin-bottom: 35px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include tablets {
+        margin-bottom: 45px;
+    }
+    @include laptop {
+        margin-bottom: 0px;
+    }
+}
+
+.equipment__swiper {
+    position: relative;
+    margin-bottom: 40px;
+    @include tablets {
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 0;
+    }
+    @include laptop {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    @include desktop {
+        max-width: 1520px;
+        margin: 0 auto;
+    }
+}
+
+.equipment__link {
+    @include link-block-hover;
+    z-index: 1;
+}
+
+.equipment__img {
+    height: 235px;
+    object-fit: cover;
+    width: 100%;
+    transition: all 0.5s ease;
+    @include laptop {
+        height: 205px;
+    }
+}
+
+.equipment__img-wrap {
+    overflow: hidden;
+}
+
+.equipment__item:hover .equipment__img {
+    transform: scale(1.1);
+}
+
+.swiper-button-next--equipment,
+.swiper-button-prev--equipment {
+    display: none;
+    @include tablets {
+        display: block;
+    }
+}
+
+.swiper-scrollbar--equipment {
+    @include tablets {
+        display: none;
+    }
+}
+
+.equipment__desc {
+    flex-grow: 1;
+    font-family: $font-title;
+    padding: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.13);
+    margin: 0 1px;
+    box-sizing: border-box;
+    text-align: left;
+    min-height: 90px;
+    @include laptop {
+        padding: 10px 20px;
+        font-size: 18px;
+        line-height: 26px;
+        min-height: 70px;
+    }
+}

@@ -1,0 +1,58 @@
+.quest {
+    @include block-style;
+    color: #060606;
+    text-align: center;
+}
+
+.quest__list {
+    @include list-destroy;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.quest__list li {
+    width: 100%;
+    margin-top: 30px;
+    @include tablets {
+        width: 45%;
+    }
+}
+
+.quest__list li>.button {
+    width: 100%;
+}
+
+.quest__link {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    /* заголовки */
+    color: #266DA4;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // justify-content: center;
+}
+
+.quest__link span {
+    text-align: left;
+}
+
+.quest__down {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #149F97;
+    margin-left: 20px;
+}
+
+.quest__link svg {
+    margin-left: auto;
+}

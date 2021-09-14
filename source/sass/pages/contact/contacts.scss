@@ -1,0 +1,82 @@
+    .contacts {
+        @include block-style;
+        background-color: #DBE3EB;
+    }
+    
+    .contacts__list {
+        @include list-destroy;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .contacts__item {
+        width: 100%;
+        background: #fff;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.13);
+        box-sizing: border-box;
+        padding: 30px 20px 40px 20px;
+        color: #292929;
+        @include tablets {
+            padding: 50px 35px;
+        }
+        @include laptop {
+            width: 48%;
+        }
+    }
+    
+    .contacts__item:first-child {
+        margin-bottom: 30px;
+        @include tablets {
+            margin-bottom: 40px;
+        }
+        @include laptop {
+            margin-bottom: 0;
+        }
+    }
+    
+    .contacts__item h3 {
+        color: #000;
+        margin-bottom: 20px;
+        padding-left: 33px;
+        @include tablets {
+            margin-bottom: 30px;
+            padding-left: 70px;
+        }
+    }
+    
+    .contacts__info:nth-of-type(1) {
+        margin-bottom: 35px;
+    }
+    
+    .contacts__info {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .contacts__item a {
+        color: inherit;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    
+    .contacts__phone a:last-child {
+        margin-left: 35px;
+        margin-top: 10px;
+        @include big-mobile {
+            margin: 0;
+        }
+    }
+    
+    .contacts__icon {
+        flex-shrink: 0;
+        width: 23px;
+        height: 20px;
+        margin-right: 10px;
+        @include tablets {
+            width: 35px;
+            height: 25px;
+            margin-right: 35px;
+        }
+    }

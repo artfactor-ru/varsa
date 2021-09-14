@@ -1,0 +1,50 @@
+.pagination {
+    display: flex;
+    @include list-destroy;
+    width: 100%;
+    max-width: 315px;
+    justify-content: space-between;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 150.19%;
+    /* or 54px */
+    color: #6D6F71;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    @include desktop {
+        margin-bottom: 55px;
+    }
+}
+
+.pagination .current {
+    color: $color-green;
+}
+
+.pagination a {
+    color: inherit;
+}
+
+.pagination a:hover {
+    color: $color-green;
+}
+
+.pagination__icon {
+    width: 13px;
+    height: 19px;
+    fill: #6D6F71;
+    transition: all 0.5s ease;
+}
+
+.next .pagination__icon {
+    transform: rotate(180deg);
+}
+
+.next:hover .pagination__icon,
+.prev:hover .pagination__icon {
+    fill: $color-green;
+}
+
+.pagination .disabled {
+    opacity: 0.5;
+}

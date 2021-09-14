@@ -1,0 +1,78 @@
+.project {
+    background: url(../img/mask-bg.svg);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    overflow: hidden;
+    color: #fff;
+    @include block-style;
+}
+
+.project__list {
+    @include list-destroy;
+    display: flex;
+    margin-top: 20px;
+    @include tablets {
+        margin-top: 30px;
+    }
+    @include laptop {
+        margin-top: 50px;
+    }
+    @include desktop {
+        margin-top: 65px;
+    }
+}
+
+.project__link {
+    @include link-block-hover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.project__item {
+    margin-bottom: 45px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project__item:hover .project__image {
+    transform: scale(1.1);
+}
+
+.project__wrap {
+    overflow: hidden;
+}
+
+.project__image {
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+        height: 315px;
+    }
+}
+
+.project__desc {
+    flex-grow: 1;
+    color: #fff;
+    text-align: left;
+    min-height: 150px;
+    box-sizing: border-box;
+    padding: 30px 20px 50px 20px;
+    background: linear-gradient(180deg, rgba(6, 67, 81, 0) 21.15%, rgba(0, 51, 63, 0.9) 64.9%);
+}
+
+.swiper-scrollbar--project {
+    background: #D1DCE7;
+}
+
+.swiper-scrollbar--project .swiper-scrollbar-drag {
+    background: #fff;
+}

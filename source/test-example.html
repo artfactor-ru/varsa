@@ -1,0 +1,539 @@
+<!-- Шапка и меню -->
+<include src="components/header.html"></include>
+
+
+
+
+<main class="inner">
+    <section class="hero hero-inner" style="background-image:url(./img/bg-serv.jpg)">
+        <div class="container">
+            <h1 class="hero__title">Сервис</h1>
+
+
+            <div class="hero__desc">
+                <div class="hero__desc-wrap">
+                    <p>Большое количество рудников на пространстве постсоветского региона до недавнего времени работало на оборудовании, которое было спроектировано и произведено в советское время, которое в общей своей массе устарело или перестало удовлетворять
+                        растущие потребности недропользователей.</p>
+
+                    <p>В данной области промышленного оборудования мы являемся единственными поставщиками и разработчиками уникального сорбционно-десорбционного оборудования. Совместно с нашими партнерами были спроектированы, произведены и поставлены совершенно
+                        новые аппараты из термопласта для выщелачивания урана</p>
+                </div>
+
+
+                <a class="hero__link-desc link-detail" href="">Подробнее</a>
+
+            </div>
+    </section>
+
+</main>
+
+
+
+<section class="form">
+
+    <div class="container">
+        <ul class="steps">
+            <li class="steps__item current">
+                <h4>Шаг 1</h4>
+                <p>Контактные данные</p>
+            </li>
+
+            <li class="steps__item">
+                <h4>Шаг 2</h4>
+                <p>Среда использования</p>
+            </li>
+
+            <li class="steps__item">
+                <h4>Шаг 3</h4>
+                <p>Параметры емкости</p>
+            </li>
+            <li class="steps__item">
+                <h4>Шаг 4</h4>
+                <p>Оснастка емкости</p>
+            </li>
+            <li class="steps__item">
+                <h4>Шаг 5</h4>
+                <p>Отправка заявки</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <form method="POST" enctype="multipart/form-data">
+            <fieldset class="current">
+                <h4>Пожалуйста заполните контактную информацию о себе:</h4>
+                <div class="error"></div>
+                <div class="form__wrap">
+
+
+
+                    <div class="form__column">
+                        <label>
+                            <span>Фирма <span class="required">*</span></span>
+                            <input name="user_firm" type="text"  min="5" required title="*Поле Фирма обязательное для заполнения и должно содержать более 5 символов">
+                            <i class="fa fa-building fa-2x inline-block" aria-hidden="true"></i>
+                        </label>
+                        <label>
+                            <span>Контактное лицо<span class="required">*</span></span>
+                            <input name="user_сontactface" type="text"  min="5" required title="*Поле Контактное лицо обязательное для заполнения и должно содержать более 5 символов">
+                            <i class="fa fa-male fa-2x inline-block" aria-hidden="true"></i>
+                        </label>
+                        <label>
+                            <span>Должность</span>
+                            <input name="user_work" type="text"  min="5" >
+                            <i class="fa fa-briefcase fa-2x inline-block" aria-hidden="true"></i>
+                        </label>
+                        <label>
+                            <span>Телефон <span class="required">*</span></span>
+                            <input name="user_phone" type="tel" required title="*Поле Телефон обязательное для заполнения и должно быть введено в формате">
+                            <i class="fa fa-phone fa-2x inline-block" aria-hidden="true"></i>
+                        </label>
+                        <label>
+                            <span>E-mail <span class="required">*</span></span>
+                            <input name="user_email" type="email" required title="*Поле Email обязательное для заполнения и должно быть введено в формате">
+                            <i class="fa fa-envelope-o fa-2x inline-block" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                    <div class="form__column">
+                        <label>
+                            <span>Улица</span>
+                            <input name="user_street" type="text"  min="5">
+                            <i class="fa fa-road fa-2x inline-block" aria-hidden="true"></i>
+                        </label>
+                        <label>
+                            <span>Индекс</span>
+                            <input name="user_index" type="text"  min="5">
+                            <i class="fa fa-code fa-2x inline-block" aria-hidden="true"></i>
+                        </label>
+                        <label>
+                            <span>Город</span>
+                            <input name="user_city" type="text"  min="5">
+                            <i class="fa fa-map-marker fa-2x inline-block" aria-hidden="true"></i>
+                        </label>
+                        <label>
+                            <span>Страна</span>
+                            <input name="country" type="text"  min="5">
+                            <i class="fa fa-globe fa-2x inline-block" aria-hidden="true"></i>
+                        </label>
+                        <label>
+                            <span>WWW</span>
+                            <input name="user_cite" type="text"  min="5">
+                            <i class="fa fa-internet-explorer fa-2x inline-block" aria-hidden="true"></i>
+                        </label>
+                    </div>
+                </div>
+
+                <button type="button" class="button button-step">Перейти к шагу 2</button>
+            </fieldset>
+
+
+            <fieldset>
+                <h4>В какой среде будет использоваться:
+                </h4>
+                <div class="error"></div>
+
+
+
+                <div class="form__column form__column--wide">
+                    <label>
+                        <span>Название / хим.формула<span class="required">*</span></span>
+                        <input name="user_him" type="text" required title="*Поле Название / хим.формула обязательное для заполнения" placeholder="Хлороводород, HCL">
+                        <i class="fa fa-atom fa-2x inline-block" aria-hidden="true"></i>
+
+                    </label>
+                    <label>
+                        <span>Концентрация / плотность<span class="required">*</span></span>
+                        <input name="user_concentrate" type="number"  required title="*Поле Концентрация / плотность обязательное для заполнения" placeholder="Концентрация в % или плотность кг/дм³">
+                        <i class="fa fa-flask fa-2x inline-block" aria-hidden="true"></i>
+                    </label>
+
+
+                    <label>
+                        <span>Рабочая температура<span class="required">*</span></span>
+                        <div class="form__wrap">
+
+                            <div class="form_group">
+                                <input name="user_tempmin" type="number" placeholder="мин °C" required>
+                                <i class="fa fa-thermometer-empty fa-2x inline-block" aria-hidden="true"></i>
+                            </div>
+
+                            <div class="form_group">
+                                <input name="user_tempmax" type="number" placeholder="макс °C" title="*Поле Температура обязательное для заполнения" required>
+                                <i class="fa fa-thermometer-full fa-2x inline-block" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        
+                    </label>
+
+
+                    <label>
+                        <span>Температура окружающей среды<span class="required">*</span></span>
+                        <div class="form__wrap">
+
+                            <div class="form_group">
+                                <input name="user_tempmin" type="number" placeholder="мин °C" title="*Поле Температура обязательное для заполнения" required>
+                                <i class="fa fa-thermometer-empty fa-2x inline-block" aria-hidden="true" ></i>
+                            </div>
+
+                            <div class="form_group">
+                                <input name="user_tempmax" type="number" placeholder="макс °C" title="*Поле Температура обязательное для заполнения" required>
+                                <i class="fa fa-thermometer-full fa-2x inline-block" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        
+                    </label>
+
+                    <label>
+                        <span>Вязкость</span>
+                        <input name="user_vyaz" type="number" placeholder="Концентрация в % или плотность кг/дм³">
+                        <i class="fa fa-vial fa-2x inline-block" aria-hidden="true"></i>
+                    </label>
+
+                    <label>
+                        <span>Вязкость температура</span>
+                        <input name="user_vyaztemp" type="number" placeholder="°C">
+                        <i class="fa fa-vial fa-2x inline-block" aria-hidden="true"></i>
+                    </label>
+
+
+
+
+                    <label>
+
+                            
+                            <span>Степень чистоты среды<span class="required">*</span></span>
+
+                            <div class="form__wrap">
+                                <div class="form__checkwrap">
+                                    <div class="form__checkgroup">
+                                
+                                        <input name="chistota" type="radio" id="chistota-1" value="Чистая" checked>
+                                        <label for="chistota-1">Чистая</label>
+                    <i class="fa fa-2x inline-block" aria-hidden="true"></i>
+                </div>
+                <div class="form__checkgroup">
+
+                    <input name="chistota" type="radio" id="chistota-2" value="Загрязненная">
+                    <label for="chistota-2">Загрязненная </label>
+                    <i class="fa fa-2x inline-block" aria-hidden="true"></i>
+                </div>
+    </div>
+
+    </div>
+
+
+
+    </label>
+
+
+    <label>
+                        <span>Содержание твердых частиц</span>
+                        <input name="user_tverd" type="number" placeholder="max. г/л">
+                        <i class="fa  fa-2x inline-block" aria-hidden="true"></i>
+                    </label>
+    <label>
+                        <span>Максимальный размер частиц </span>
+                        <input name="user_tverd" type="number" placeholder="мм.">
+                        <i class="fa fa-2x inline-block" aria-hidden="true"></i>
+                    </label>
+    </div>
+
+
+
+    <button type="button" class="button button-step">Перейти к шагу 3</button>
+    </fieldset>
+
+    <fieldset>
+        <h4>Пожалуйста выбирите параметры емкости:</h4>
+        <div class="error"></div>
+        <div class="form__wrap">
+
+
+            <div class="form__column">
+                <label>
+                    <span>Тип Установки<span class="required">*</span></span>
+
+
+                    <div class="form__checkwrap">
+                        <div class="form__checkgroup">
+                       
+                            <input name="pomeshenie" type="radio" id="pomeshenie-1" value="Установка в помещении" checked>
+                            <label for="pomeshenie-1">Установка в помещении  <i class="fa fa-home fa-2x inline-block" aria-hidden="true"></i></label>
+
+            </div>
+            <div class="form__checkgroup">
+
+                <input name="pomeshenie" type="radio" id="pomeshenie-2" value="Установка на улице">
+                <label for="pomeshenie-2">Установка на улице  <i class="fa fa-cloud-sun-rain fa-2x inline-block" aria-hidden="true"></i></label>
+
+            </div>
+        </div>
+
+
+
+        </label>
+
+
+        <label>
+            <span>Тип Дна<span class="required">*</span></span>
+
+
+            <div class="form__checkwrap">
+                <div class="form__checkgroup">
+               
+                    <input name="dno" type="radio" id="dno-1" value="Плоское" checked>
+                    <label for="dno">Плоское  <i class="fa fa-ruler-horizontal fa-2x inline-block" aria-hidden="true"></i></label>
+
+        </div>
+        <div class="form__checkgroup">
+
+            <input name="dno" type="radio" id="dno-2" value="Наклонное">
+            <label for="dno-2">Наклонное  <i class="fa fa-ruler fa-2x inline-block" aria-hidden="true"></i></label>
+
+        </div>
+        <div class="form__checkgroup">
+
+            <input name="dno" type="radio" id="dno-3" value="Воронкообразное">
+            <label for="dno-3">Воронкообразное  <i class="fa fa-filter fa-2x inline-block" aria-hidden="true"></i></label>
+
+        </div>
+        </div>
+
+
+
+        </label>
+
+        <label>
+            <span>Полезный объем<span class="required">*</span></span>
+            <input name="user_ob" type="text"  required title="*Поле Полезный объем обязательное для заполнения" placeholder="Например, 10.5 м³">
+            <i class="fa fa-building fa-2x inline-block" aria-hidden="true"></i>
+        </label>
+        </div>
+        <div class="form__column">
+            <label>
+                <span>Крышка<span class="required">*</span></span>
+
+
+                <div class="form__checkwrap">
+                    <div class="form__checkgroup">
+                   
+                        <input name="krishka" type="radio" id="krishka-1" value="Да" checked>
+                        <label for="krishka-1">Да</label>
+
+        </div>
+        <div class="form__checkgroup">
+
+            <input name="krishka" type="radio" id="krishka-2" value="Нет">
+            <label for="krishka-2">Нет</label>
+
+        </div>
+        </div>
+
+
+
+        </label>
+
+        </div>
+        </div>
+
+        <button type="button" class="button button-step">Перейти к шагу 4</button>
+    </fieldset>
+
+    <fieldset>
+        <h4>Пожалуйста выбирите оснастку емкости:</h4>
+        <div class="error"></div>
+
+
+        <div class="form__wrap">
+            <div class="form__column">
+
+
+                <label>
+    
+                        
+                    <span>Патрубки<span class="required">*</span></span>
+    
+                    <div class="form__wrap">
+                        <div class="form__checkwrap">
+                            <div class="form__checkgroup">
+                        
+                                <input name="patrubki-1" type="checkbox" id="patrubki-1" value="Входные" checked>
+                                <label for="patrubki-1">Входные</label>
+            </div>
+            <div class="form__checkgroup">
+
+                <input name="patrubki" type="checkbox" id="patrubki-2" value="Выходные">
+                <label for="patrubki-2">Загрязненная </label>
+            </div>
+            <div class="form__checkgroup">
+
+                <input name="patrubki" type="checkbox" id="patrubki-3" value="Резервные">
+                <label for="patrubki-3">Резервные</label>
+            </div>
+            <div class="form__checkgroup">
+
+                <input name="patrubki" type="checkbox" id="patrubki-4" value="Люк в крыше">
+                <label for="patrubki-4">Люк в крыше</label>
+            </div>
+            <div class="form__checkgroup">
+
+                <input name="patrubki" type="checkbox" id="patrubki-5" value="Смотровые окна">
+                <label for="patrubki-5">Смотровые окна</label>
+            </div>
+        </div>
+
+        </div>
+
+
+
+        </label>
+        <label>
+            <span>Прочее</span>
+            <textarea name="patrubki-ost"></textarea>
+        </label>
+
+
+        <label>
+    
+                        
+            <span>Контрольно–измерительные приборы<span class="required">*</span></span>
+
+            <div class="form__wrap">
+                <div class="form__checkwrap">
+                    <div class="form__checkgroup">
+                
+                        <input name="pribor-1" type="checkbox" id="pribor-1" value="Датчик уровня жидкости" checked>
+                        <label for="pribor-1">Датчик уровня жидкости</label>
+        </div>
+        <div class="form__checkgroup">
+
+            <input name="pribor" type="checkbox" id="pribor-2" value="Датчик перелива">
+            <label for="pribor-2">Датчик перелива </label>
+        </div>
+        <div class="form__checkgroup">
+
+            <input name="pribor" type="checkbox" id="pribor-3" value="Датчик утечки">
+            <label for="pribor-3">Датчик утечки</label>
+        </div>
+
+        </div>
+
+        </div>
+
+
+
+        </label>
+        <label>
+    <span>Прочее</span>
+    <textarea name="pribor-ost"></textarea>
+</label>
+
+
+
+
+
+        </div>
+        <div class="form__column">
+            <label>
+    
+                        
+                <span>Перемешивающее устройство<span class="required">*</span></span>
+            
+                <div class="form__wrap">
+                    <div class="form__checkwrap">
+                        <div class="form__checkgroup">
+                    
+                            <input name="ustr-1" type="checkbox" id="ustr-1" value="Нет" checked>
+                            <label for="ustr-1">Нет</label>
+        </div>
+        <div class="form__checkgroup">
+
+            <input name="ustr" type="checkbox" id="ustr-2" value="Лопостная">
+            <label for="ustr-2">Лопостная </label>
+        </div>
+        <div class="form__checkgroup">
+
+            <input name="ustr" type="checkbox" id="ustr-3" value="Якорьная">
+            <label for="ustr-3">Якорьная</label>
+        </div>
+
+        </div>
+
+        </div>
+
+
+
+        </label>
+        <label>
+            <span>Прочее</span>
+            <textarea name="ustr-ost"></textarea>
+            </label>
+        <label>
+    
+                        
+        <span>ТЭН для емкости (обогревающее устройство, теплообменник)<span class="required">*</span></span>
+    
+        <div class="form__wrap">
+            <div class="form__checkwrap">
+                <div class="form__checkgroup">
+            
+                    <input name="ten-1" type="checkbox" id="ten-1" value="Нет" checked>
+                    <label for="ten-1">Нет</label>
+        </div>
+        <div class="form__checkgroup">
+
+            <input name="ten" type="checkbox" id="ten-2" value="Лопостная">
+            <label for="ten-2">Лопостная </label>
+        </div>
+        <div class="form__checkgroup">
+
+            <input name="ten" type="checkbox" id="ten-3" value="Якорьная">
+            <label for="ten-3">Якорьная</label>
+        </div>
+
+        </div>
+
+        </div>
+
+
+
+        </label>
+        <label>
+        <span>Прочее</span>
+        <textarea name="ten-ost"></textarea>
+        </label>
+
+        <label>
+            <span>Прочая желаемая оснастка</span>
+            <textarea name="all-ost" row="8"></textarea>
+            </label>
+
+        </div>
+        </div>
+
+        <button type="button" class="button button-step">Перейти к шагу 5</button>
+    </fieldset>
+
+    <fieldset>
+        <h4>Отправка заявки на обработку:</h4>
+        <div class="error"></div>
+        <div class="form__column form__column--wide">
+            <label>
+                <span>Дополнительная информация</span>
+                <textarea name="all-ost" style="height: 200px;" placeholder="Прочее"></textarea>
+                </label>
+        </div>
+
+        <button type="submit" class="button button-send"><i class="fa fa-envelope-o" aria-hidden="true"></i>Отправить</button>
+    </fieldset>
+
+    <div class="thank">
+        <h2>Cпасибо за заполнение анкеты!</h2>
+    </div>
+    </form>
+    </div>
+
+</section>
+
+<!-- Футер -->
+<include src="components/footer.html"></include>

@@ -1,0 +1,93 @@
+.advantages {
+    background: linear-gradient(271.51deg, #C6D4E1 9.95%, rgba(255, 255, 255, 0) 48.71%), #E4EBF1;
+    position: relative;
+    color: #153D5C;
+}
+
+.advantages__wrap {
+    @include laptop {
+        display: flex;
+    }
+}
+
+.advantages h2 {
+    color: #266DA4;
+}
+
+.advantages__img {
+    display: none;
+    // width: 100%;
+    @include laptop {
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: auto;
+        max-width: none; // object-fit: cover;
+        top: 0;
+        right: -38%;
+    }
+    @include desktop {
+        right: -10%;
+    }
+}
+
+.advantages__column {
+    @include block-style;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    &:first-child {
+        display: none;
+    }
+    @include laptop {
+        &:first-child {
+            display: block;
+            width: 40%;
+        }
+        width: 60%;
+        padding: 30px 0px
+    }
+    @include desktop {
+        padding: 35px 0px;
+        width: 50%;
+        &:first-child {
+            width: 50%;
+        }
+    }
+}
+
+.advantages ul {
+    @include list-destroy;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    @include tablets {
+        width: 80%;
+    }
+    @include laptop {
+        width: 100%;
+    }
+}
+
+.advantages li {
+    display: flex;
+    align-items: center;
+}
+
+.advantages li:not(:last-child) {
+    margin-bottom: 10px;
+    @include laptop {
+        margin-bottom: 10px;
+    }
+}
+
+.advantages ul li img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.link-more--advantages {
+    @include tablets {
+        margin-left: 60px;
+    }
+}

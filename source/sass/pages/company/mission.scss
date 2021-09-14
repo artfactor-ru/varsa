@@ -1,0 +1,35 @@
+.mission {
+    @include block-style;
+    background: linear-gradient(271.51deg, #C6D4E1 9.95%, rgba(255, 255, 255, 0) 48.71%), #E4EBF1;
+    & ul {
+        @include list-destroy;
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+        justify-content: space-between;
+        @include tablets {
+            width: 80%;
+        }
+        @include laptop {
+            width: 100%;
+        }
+        & li {
+            width: 100%;
+            @include laptop {
+                width: 32%;
+            }
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+            & h3 {
+                text-transform: uppercase;
+                color: #266DA4;
+                margin-bottom: 10px;
+            }
+            & img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    }
+}

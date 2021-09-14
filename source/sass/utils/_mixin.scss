@@ -1,0 +1,95 @@
+@mixin big-mobile {
+    @media(min-width: 450px) {
+        @content;
+    }
+}
+
+@mixin tablets {
+    @media(min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media(min-width: 1285px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media(min-width: 1500px) {
+        @content;
+    }
+}
+
+@mixin btn-destroy {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    // box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+}
+
+@mixin input-destroy {
+    border: none;
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+// Удаляем стили списка
+@mixin list-destroy {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    // font-style: inherit;
+    // font-size: inherit;
+    // font-family: inherit;
+}
+
+@mixin block-style {
+    padding: 40px 0px;
+    @include tablets {
+        padding: 50px 0px;
+    }
+    @include laptop {
+        padding: 60px 0px;
+    }
+    @include desktop {
+        padding: 70px 0px;
+    }
+}
+
+@mixin link-block-hover {
+    position: absolute;
+    width: 99.5%;
+    display: block;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    border: 1px solid transparent;
+    @include laptop {
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            right: 0;
+            bottom: 0;
+            border-style: solid;
+            border-width: 0 0px 0px 0px;
+            border-color: transparent transparent #049990 transparent;
+            opacity: 0.5;
+            transition: all 0.5s ease-in-out;
+        }
+        &:hover::after {
+            border-width: 0 0px 33px 40px;
+        }
+    }
+    &:hover {
+        border: 1px solid $color-green;
+    }
+}
